@@ -30,11 +30,28 @@
             
             <ul class="user-nav">
                 <li class="user-nav-search"></li>
-                <!-- Search field -->
+                    <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                        <label class="hidden" for="search-field">Поиск</label>
+                        <input id="search-field" type="text" name="search-field" placeholder="Что ищем?">
+                    </form>
                 <li class="user-nav-login">
                     <a href="#">Вход</a>
+                    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                        <p>
+                            <label class="hidden" for="user-email">Электронная почта</label> 
+                            <input class="login-form-email" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+                        </p>
+                        <p>
+                            <label class="hidden" for="user-password">Пароль</label>
+                            <input class="login-form-password" id="user-password" type="password" name="user-password" placeholder="Пароль">
+                        </p>
+                        <button class="button login-form-button" type="submit">Войти</button>
+                        <p>
+                            <a class="restore-password" href="#">Забыли пароль?</a> 
+                            <a class="signup" href="#">Новая регистрация</a>
+                        </p>
+                    </form>
                 </li>
-                <!-- Login form -->
                 <li class="user-nav-basket">
                     <a href="#">2 товара</a>
                     <div class="basket-window">
@@ -76,15 +93,68 @@
         <h1>Сливочное мороженое</h1>
         
         <section class="filters">
-            <p class="filter-sorting">Сортировка</p>
-            <!-- dropdown -->
-            <p class="filter-price">Цена: 100 руб. - 500 руб.</p>
-            <!-- range -->
-            <p class="filter-fat">Жирность</p>
-            <!-- radiobuttons -->
-            <p class="filter-fillers">Наполнители</p>
-            <!-- checkboxes -->
-            <button class="filters-submit">Применить</button>
+            <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+                <fieldset class="filter-sorting">
+                    <legend>Сортировка:</legend>
+                    <select>
+                        <option value="popular">по популярности</option>
+                        <option value="price: low to high">сначала недорогие</option>
+                        <option value="price: high to low">сначала дорогие</option>
+                        <option value="fat">по жирности</option>
+                    </select>
+                </fieldset>
+                <fieldset class="filter-price-range">
+                    <legend>Цена: 100 руб. - 500 руб.</legend>
+                    <input type="range" name="points" min="" max="" value="">
+                </fieldset>
+                <fieldset class="filter-fat-content">
+                    <legend>Жирность:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <input class="hidden filter-input filter-input-radio" type="radio" name="fat-percentage" value="0" id="radio-1">
+                            <label for="radio-1">0%</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="hidden filter-input filter-input-radio" type="radio" name="fat-percentage" value="0-10" id="radio-2" checked>
+                            <label for="radio-2">до 10%</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="hidden filter-input filter-input-radio" type="radio" name="fat-percentage" value="10-30" id="radio-3">
+                            <label for="radio-3">до 30%</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="hidden filter-input filter-input-radio" type="radio" name="fat-percentage" value="over 30" id="radio-4">
+                            <label for="radio-4">выше 30%</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="filter-fillers">
+                    <legend>Наполнители</legend>
+                    <ul>
+                        <li>
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-1" value="chocolate" id="checkbox-1" checked>
+                            <label for="checkbox-1">шоколадные</label>
+                        </li>
+                        <li>
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-2" value="sugar" id="checkbox-2" checked>
+                            <label for="checkbox-2">сахарные присыпки</label>
+                        </li>
+                        <li>
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-3" value="fruits" id="checkbox-3">
+                            <label for="checkbox-3">фрукты</label>
+                        </li>
+                        <li>
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-4" value="syrups" id="checkbox-4">
+                            <label for="checkbox-4">сиропы</label>
+                        </li>
+                        <li>
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-5" value="jams" id="checkbox-5">
+                            <label for="checkbox-5">джемы</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button class="filter-submit" type="submit">Применить</button>
+            </form>
         </section>
         
         <section class="catalog">
