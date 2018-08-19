@@ -27,11 +27,28 @@
             
             <ul class="user-nav">
                 <li class="user-nav-search">
-                    <!-- Search field -->
+                    <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                        <label class="hidden" for="search-field">Поиск</label>
+                        <input id="search-field" type="text" name="search-field" placeholder="Что ищем?">
+                    </form>
                 </li>
                 <li class="user-nav-login">
                     <a href="#">Вход</a>
-                    <!-- Login form -->
+                    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                        <p>
+                            <label class="hidden" for="user-email">Электронная почта</label> 
+                            <input class="login-form-email" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+                        </p>
+                        <p>
+                            <label class="hidden" for="user-password">Пароль</label>
+                            <input class="login-form-password" id="user-password" type="password" name="user-password" placeholder="Пароль">
+                        </p>
+                        <button class="button login-form-button" type="submit">Войти</button>
+                        <p>
+                            <a class="restore-password" href="#">Забыли пароль?</a> 
+                            <a class="signup" href="#">Новая регистрация</a>
+                        </p>
+                    </form>
                 </li>
                 <li class="user-nav-basket">
                     <a href="#">Пусто</a>
@@ -128,7 +145,11 @@
         <section class="subscription">
             <h2 class="hidden">Подписка на рассылку</h2>
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
-            <!-- Subscription form -->
+            <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="hidden" for="subscription-email">Электронная почта</label>
+                <input id="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
+                <button class="button subscription-button" type="submit">Отправить</button>
+            </form>
         </section>
         
         <section class="contacts">
@@ -166,8 +187,22 @@
     
     <section class="modal modal-contact-form">
         <h2>Мы обязательно вам ответим!</h2>
-        <!-- Contact form -->
-        <span class="modal-close">x</span>
+        <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label class="hidden" for="contact-form-name">Имя</label>
+                <input id="contact-form-name" type="text" name="contact-form-name" placeholder="Как вас зовут?">
+            </p>
+            <p>
+                <label class="hidden" for="contact-form-email">Электронная почта</label>
+                <input id="contact-form-email" type="email" name="contact-form-email" placeholder="Ваша почта для ответа?">
+            </p>
+            <p>
+                <label class="hidden" for="contact-form-message">Сообщение</label>
+                <textarea id="contact-form-message" name="contact-form-message" placeholder="Напишите что-нибудь..."></textarea>
+            </p>
+            <button class="button contact-form-button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
       </section>
   </body>
 </html>
