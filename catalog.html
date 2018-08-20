@@ -33,6 +33,7 @@
                     <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                         <label class="hidden" for="search-field">Поиск</label>
                         <input id="search-field" type="text" name="search-field" placeholder="Что ищем?">
+                        <button class="hidden" type="submit">Искать</button>
                     </form>
                 <li class="user-nav-login">
                     <a href="#">Вход</a>
@@ -105,7 +106,10 @@
                 </fieldset>
                 <fieldset class="filter-price-range">
                     <legend>Цена: 100 руб. - 500 руб.</legend>
-                    <input type="range" name="points" min="" max="" value="">
+                    <div class="range-bar">
+                        <span class="range-toggle range-toggle-min"></span>
+                        <span class="range-toggle range-toggle-max"></span>
+                    </div>
                 </fieldset>
                 <fieldset class="filter-fat-content">
                     <legend>Жирность:</legend>
@@ -132,23 +136,23 @@
                     <legend>Наполнители</legend>
                     <ul>
                         <li>
-                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-1" value="chocolate" id="checkbox-1" checked>
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="checkbox-1" checked>
                             <label for="checkbox-1">шоколадные</label>
                         </li>
                         <li>
-                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-2" value="sugar" id="checkbox-2" checked>
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="sugar" id="checkbox-2" checked>
                             <label for="checkbox-2">сахарные присыпки</label>
                         </li>
                         <li>
-                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-3" value="fruits" id="checkbox-3">
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="fruits" id="checkbox-3">
                             <label for="checkbox-3">фрукты</label>
                         </li>
                         <li>
-                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-4" value="syrups" id="checkbox-4">
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="syrups" id="checkbox-4">
                             <label for="checkbox-4">сиропы</label>
                         </li>
                         <li>
-                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="checkbox-5" value="jams" id="checkbox-5">
+                            <input class="hidden filter-input filter-input-checkbox" type="checkbox" name="jams" id="checkbox-5">
                             <label for="checkbox-5">джемы</label>
                         </li>
                     </ul>
