@@ -16,9 +16,11 @@ a {
 input,
 textarea {
     outline: none;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 .button {
+    font-family: "Roboto", Arial, sans-serif;
     text-align: center;
     color: #ffffff;
     vertical-align: middle;
@@ -52,10 +54,19 @@ textarea {
 
 /* Forms & Inputs */
 
-::placeholder,
-::-webkit-input-placeholder, /*Chrome*/
-::-moz-placeholder, /*Mozilla*/
-:-ms-input-placeholder, /*IE*/
+::placeholder {
+    color: #999999;
+    font-weight: 400;
+}
+::-webkit-input-placeholder { /*Chrome*/
+    color: #999999;
+} 
+::-moz-placeholder { /*Mozilla*/
+    color: #999999;
+} 
+:-ms-input-placeholder { /*IE*/
+    color: #999999;
+} 
 ::-ms-input-placeholder { /*Edge*/ 
     color: #999999;
 }
