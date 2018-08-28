@@ -58,7 +58,6 @@ textarea {
 :-ms-input-placeholder, /*IE*/
 ::-ms-input-placeholder { /*Edge*/ 
     color: #999999;
-    font-weight: 400;
 }
 
 .input-field {
