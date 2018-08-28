@@ -60,16 +60,15 @@ textarea {
 }
 ::-webkit-input-placeholder { /*Chrome*/
     color: #999999;
+    font-weight: 400;
 } 
 ::-moz-placeholder { /*Mozilla*/
     color: #999999;
 } 
-:-ms-input-placeholder { /*IE*/
+.input-field:-ms-input-placeholder { /*IE*/
     color: #999999;
+    font-weight: 400;
 } 
-::-ms-input-placeholder { /*Edge*/ 
-    color: #999999;
-}
 
 .input-field {
     font-size: 16px;
@@ -381,8 +380,6 @@ textarea {
 }
 
 .item-title a:hover,
-.item-title a:active,
-.item-title a:hover,
 .item-title a:active {
     color: #ffbc9e;
     text-decoration: underline rgba(255, 188, 158, 0.3);
@@ -574,7 +571,7 @@ textarea {
     color: #fefefe;
 }
 
-footer-copyright-link {
+.footer-copyright-link {
     color: #fefefe;
     text-decoration: underline rgba(255, 255, 255, 0.2);
 }
