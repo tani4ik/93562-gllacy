@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
-    <header class="main-header">
+    <header class="main-header wrapper">
         <nav class="main-nav">
             <div class="main-nav-logo">    
                 <a href="index.html">
@@ -94,15 +94,19 @@
     </header>
       
     <main class="container">
-        <ul class="breadcrumbs">
-              <li><a href="index.html">Главная</a></li>
-              <li><a href="#">Каталог</a></li>
-              <li class="breadcrumbs-current">Сливочное</li>
-        </ul>
+        <div class="breadcrumbs-wrapper wrapper">
+            <ul class="breadcrumbs">
+                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="#">Каталог</a></li>
+                  <li class="breadcrumbs-current">Сливочное</li>
+            </ul>
+        </div>
         
-        <h1>Сливочное мороженое</h1>
+        <div class="title-wrapper wrapper">
+            <h1>Сливочное мороженое</h1>
+        </div>
         
-        <section class="filters">
+        <section class="filters wrapper">
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter-sorting">
                     <legend>Сортировка:</legend>
@@ -170,97 +174,99 @@
             </form>
         </section>
         
-        <section class="catalog">
+        <section class="catalog wrapper">
             <h2 class="hidden">Список товаров</h2>
             
             <ul class="catalog-list">
                 <li class="catalog-item">
-                    <img src="img/item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    <img src="img/item-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <h3 class="item-title"><a href="product-page.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
                     <b class="price"><span>310₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                    <img src="img/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     <h3 class="item-title"><a href="product-page.html">Сливочно-кофейное с кусочками шоколада</a></h3>
                     <b class="price"><span>380₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    <img src="img/item-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     <h3 class="item-title"><a href="product-page.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
                     <b class="price"><span>355₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                    <img src="img/item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     <h3 class="item-title"><a href="product-page.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
                     <b class="price"><span>415₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
+                    <img src="img/item-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
                     <h3 class="item-title"><a href="product-page.html">Сливочное с брусничным джемом</a></h3>
                     <b class="price"><span>325₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-6.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
+                    <img src="img/item-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
                     <h3 class="item-title"><a href="product-page.html">Сливочно-черничное с цельными ягодами черники</a></h3>
                     <b class="price"><span>410₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-7.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+                    <img src="img/item-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                     <h3 class="item-title"><a href="product-page.html">Сливочно-лимонное с карамельной присыпкой</a></h3>
                     <b class="price"><span>375₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
+                    <img src="img/item-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
                     <h3 class="item-title"><a href="product-page.html">Сливочное с шоколадной стружкой</a></h3>
                     <b class="price"><span>320₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
+                    <img src="img/item-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                     <h3 class="item-title"><a href="product-page.html">Сливочно-ванильное с кусочками шоколада</a></h3>
                     <b class="price"><span>440₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-10.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом">
+                    <img src="img/item-10.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
                     <h3 class="item-title"><a href="product-page.html">Сливочное с ментоловым сиропом</a></h3>
                     <b class="price"><span>435₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-11.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
+                    <img src="img/item-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
                     <h3 class="item-title"><a href="product-page.html">Сливочное с кусочками черного шоколада</a></h3>
                     <b class="price"><span>355₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item">
-                    <img src="img/item-12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
+                    <img src="img/item-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
                     <h3 class="item-title"><a href="product-page.html">Сливочное с мятным сиропом</a></h3>
                     <b class="price"><span>420₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
             </ul>
         </section>
-        
-        <ul class="pagination-list">
-            <li class="pagination-item pagination-item-disabled"><a href="#"><span class="pagination-previous">&lsaquo;</span></a></li>
-            <li class="pagination-item pagination-item-current"><a>1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item"><a href="#">4</a></li>
-            <li class="pagination-item"><a href="#">5</a></li>
-            <li class="pagination-item"><a href="#"><span class="pagination-next">&rsaquo;</span></a></li>
-        </ul>
+            
+        <div class="pagination-wrapper wrapper">
+            <ul class="pagination-list">
+                <li class="pagination-item pagination-item-disabled"><a href="#"><span class="pagination-previous">&lsaquo;</span></a></li>
+                <li class="pagination-item pagination-item-current"><a>1</a></li>
+                <li class="pagination-item"><a href="#">2</a></li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">4</a></li>
+                <li class="pagination-item"><a href="#">5</a></li>
+                <li class="pagination-item"><a href="#"><span class="pagination-next">&rsaquo;</span></a></li>
+            </ul>
+        </div>
     </main>
       
-    <footer class="main-footer">
+    <footer class="main-footer wrapper">
         <div class="footer-social">
             <ul class="social-list">
                 <li class="social-button social-button-twitter"><a href="https://twitter.com/"></a></li>

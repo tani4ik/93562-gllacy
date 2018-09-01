@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header wrapper">
         <nav class="main-nav">
             <div class="main-nav-logo">
                 <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
@@ -73,7 +73,7 @@
     <main class="container">
         <h1 class="hidden">Магазин мороженого Gllacy</h1>
       
-        <section class="gallery-slider">
+        <section class="gallery-slider wrapper">
             <h2 class="hidden">Галерея с мороженым</h2>
             <div class="image-slide image-slide-current">
                 <h3>Крем-брюле и пломбир с малиновым джемом</h3>
@@ -92,7 +92,7 @@
             </div>
         </section>
         
-        <div class="special-offer">
+        <div class="special-offer wrapper">
             <h2 class="hidden">Специальные предложения</h2>
             <section class="free-offer free-offer-left">
                 <h3>Малинка даром!</h3>
@@ -106,29 +106,29 @@
             </section>
         </div>
         
-        <section class="best-selling">
+        <section class="best-selling wrapper">
             <h2 class="hidden">Популярные товары</h2>
             <ul class="best-selling-list">
                 <li class="best-selling-item">
-                    <img src="img/item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    <img src="img/item-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <h3 class="item-title"><a href="product-page.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
                     <b class="price"><span>310₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="best-selling-item">
-                    <img src="img/item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                    <img src="img/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     <h3 class="item-title"><a href="product-page.html">Сливочно-кофейное с кусочками шоколада</a></h3>
                     <b class="price"><span>380₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="best-selling-item">
-                    <img src="img/item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    <img src="img/item-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     <h3 class="item-title"><a href="product-page.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
                     <b class="price"><span>355₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="best-selling-item">
-                    <img src="img/item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                    <img src="img/item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     <h3 class="item-title"><a href="product-page.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
                     <b class="price"><span>415₽</span>/кг</b>
                     <a class="button button-quick-preview" href="#">Быстрый просмотр</a>
@@ -136,7 +136,7 @@
             </ul>
         </section>
         
-        <section class="advantages">
+        <section class="advantages wrapper">
             <h2>Магазин Глэйси &mdash; это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
             <ul class="advantages-list">
                 <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
@@ -146,22 +146,24 @@
             </ul>
         </section>
         
-        <section class="blog">
-            <h2>Новое в нашем блоге</h2>
-            <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
-        </section>
+        <div class="blog-wrapper wrapper">
+            <section class="blog">
+                <h2>Новое в нашем блоге</h2>
+                <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
+            </section>
+
+            <section class="subscription">
+                <h2 class="hidden">Подписка на рассылку</h2>
+                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
+                <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="hidden" for="subscription-email">Электронная почта</label>
+                    <input class="input-field" id="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
+                    <button class="button subscription-button" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
         
-        <section class="subscription">
-            <h2 class="hidden">Подписка на рассылку</h2>
-            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
-            <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-                <label class="hidden" for="subscription-email">Электронная почта</label>
-                <input class="input-field" id="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
-                <button class="button subscription-button" type="submit">Отправить</button>
-            </form>
-        </section>
-        
-        <section class="contacts">
+        <section class="contacts wrapper">
             <div class="contacts-box">
                 <h2 class="hidden">Контактная информация</h2>
                 <p>Адрес главного офиса и офлайн-магазина:<br><span class="contacts-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
@@ -171,7 +173,7 @@
         </section>
     </main>
       
-    <footer class="main-footer">
+    <footer class="main-footer wrapper">
         <div class="footer-social">
             <ul class="social-list">
                 <li class="social-button social-button-twitter"><a href="https://twitter.com/"></a></li>
