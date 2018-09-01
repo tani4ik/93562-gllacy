@@ -100,10 +100,39 @@ textarea {
 
 /* Site navigation */
 
+.wrapper {
+    width: 1146px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9px;
+    margin-bottom: 0;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.main-nav-logo {
+    width: 155px;
+    height: 65px;
+    margin-right: 21px;
+}
+
 .site-nav,
 .subnav,
 .user-nav {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav {
+    width: 349px;
 }
 
 .site-nav a,
@@ -147,6 +176,8 @@ textarea {
 }
 
 .subnav {
+    width: 143px;
+    min-height: 171px;
     background-color: #f8f7f4;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
@@ -191,6 +222,15 @@ textarea {
 
 /* User navigation */
 
+.user-nav {
+    width: 245px;
+    margin-left: auto;
+}
+
+.inner-page .user-nav {
+    width: 261px;
+}
+
 .user-nav-search > a,
 .user-nav-login > a,
 .user-nav-basket > a {
@@ -229,6 +269,11 @@ textarea {
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
+.modal-search {
+    width: 341px;
+    min-height: 84px;
+}
+
 .login-links a {
     font-size: 13px;
     line-height: 24px;
@@ -245,6 +290,8 @@ textarea {
 }
 
 .modal-basket {
+    width: 540px;
+    min-height: 242px;
     background-color: #f8f7f4;
     border-radius: 5px;
     
@@ -269,15 +316,6 @@ textarea {
     font-weight: 700;
 }
 
-.modal-search,
-.modal-login {
-    background-color: #f8f7f4;
-    border-radius: 5px;
-    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-}
-
-
-
 .login-links a {
     font-size: 13px;
     line-height: 24px;
@@ -294,6 +332,8 @@ textarea {
 }
 
 .main-header-contacts {
+    margin: 0;
+    padding: 0;
     font-size: 14px;
     line-height: 16px;
     text-align: right;
@@ -307,7 +347,6 @@ textarea {
     color: #ffffff;
 }
 
-
 /* Main container */
 
 .inner-page h1 {
@@ -318,12 +357,35 @@ textarea {
     font-weight: 700;
 }
 
+.gallery-slider {
+    position: relative;
+    bottom: 235px;
+    z-index: -1;
+}
+
 .image-slide h3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    top: 510px;
+    
     font-size: 60px;
     line-height: 60px;
     text-align: center;
     color: #ffffff;
     font-weight: 700;
+}
+
+.special-offer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.free-offer {
+    width: 560px;
+    min-height: 229px;
 }
 
 .free-offer h3 {
@@ -357,6 +419,24 @@ textarea {
 }
 
 /* Ice-cream catalog */
+
+.catalog-wrapper {
+    margin-bottom: 80px;
+}
+
+.best-selling-list,
+.catalog-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.best-selling-item,
+.catalog-item {
+    width: 267px;
+}
 
 .best-selling-list,
 .catalog-list {
@@ -407,8 +487,6 @@ textarea {
     color: #ffffff;
 }
 
-
-
 .advantages {
     background-color: #ffd393;
     background-image: url(../img/waffel.jpg);
@@ -433,13 +511,18 @@ textarea {
     font-weight: 400;
 }
 
-
+.blog-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
 .blog {
+    width: 560px;
+    min-height: 220px;
     background-color: #ffffff;
     background-image: url(../img/blog-background.jpg);
     background-repeat: no-repeat;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .blog h2 {
@@ -467,8 +550,11 @@ textarea {
 
 
 .subscription {
+    width: 549px;
+    min-height: 211px;
     background-color: #f8f7f4;
-    border-radius: 10px;
+    border-radius: 15px;
+    border: 4px solid lightblue;
 }
 
 .subscription p {
@@ -481,12 +567,21 @@ textarea {
 
 
 .contacts {
+    width: 1200px;
+    min-height: 428px;
+    padding-top: 1px;
+    margin-bottom: 0;
     background-color: #ffffff;
     background-image: url(../img/map.jpg);
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .contacts-box {
+    margin-left: 871px;
+    margin-top: 61px;
+    width: 302px;
+    height: 305px;
     background-color: #ffffff;
     border-radius: 15px;
 }
@@ -506,11 +601,45 @@ textarea {
     font-weight: 700;
 }
 
+/*Footer*/
+
+.footer-wrapper {
+    margin-bottom: 0;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-social {
+    width: 185px;
+    margin: 0;
+    margin-right: 236px;
+}
+
+.footer-links {
+    width: 304px;
+    margin: 0;
+}
+
+.footer-copyright {
+    width: 191px;
+    margin: 0;
+    margin-left: auto;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* Social buttons */
 
-.social-list {
-    list-style: none;
-}
 
 .social-button {
     background-repeat: no-repeat;
@@ -539,10 +668,6 @@ textarea {
 }
 
 /* Footer links */
-
-.footer-links ul {
-    list-style: none;
-}
 
 .footer-links a {
     font-size: 13px;
@@ -586,6 +711,9 @@ textarea {
 /* Contact form */
 
 .modal-contact-form {
+    width: 478px;
+    height: 443px;
+    margin: 0 auto;
     background-color: #f8f7f4;
     border-radius: 10px;
 }
@@ -601,8 +729,14 @@ textarea {
 
 /* Breadcrumbs */
 
+.breadcrumbs-wrapper {
+    margin-bottom: 13px;
+}
+
 .breadcrumbs {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .breadcrumbs li,
@@ -623,10 +757,58 @@ textarea {
     text-decoration: underline rgba(255, 188, 158, 0.3);
 }
 
+.title-wrapper {
+    margin-bottom: 30px;
+}
+
 /* Filters */
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 860px;
+    justify-content: space-between;
+}
+
+.filter-sorting {
+    width: 194px;
+    margin-right: 14px;
+}
+
+.filter-sorting select {
+    width: 194px;
+}
+
+.filter-price-range {
+    width: 220px;
+}
+
+.range-bar {
+    background-color: rgba(248, 247, 244, 0.2);
+    width: 220px;
+    height: 37px;
+}
+
+.filter-fat-content {
+    width: 415px;
+    margin-left: auto;
+}
+
+.filter-fillers {
+    width: 703px;
+}
+
+.filter-submit {
+    width: 144px;
+    height: 37px;
+    margin: 0;
+    padding: 0;
+}
 
 .filter fieldset {
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .filter legend {
@@ -648,6 +830,8 @@ textarea {
 .filter-fat-content ul,
 .filter-fillers ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .filter-fat-content label,
@@ -679,7 +863,16 @@ textarea {
 
 /* Paginator */
 
+.pagination-wrapper {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .pagination-list {
+    width: 190px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
