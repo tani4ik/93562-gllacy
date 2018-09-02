@@ -144,29 +144,29 @@ textarea {
     font-weight: 700;
 }
 
-.site-nav-item > a {
+.site-nav-link {
     text-decoration: underline rgba(255, 255, 255, 0.2);
 }
 
-.site-nav-item > a:hover {
+.site-nav-link:hover {
     background-color: #f7f6f3;
     color: #333333;
     border-radius: 20px;
     text-decoration: none;
 }
 
-.site-nav-item > a:active {
+.site-nav-link:active {
     box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
-.site-nav-item-current > a {
+.site-nav-link-current {
     background-color: #d07058;
     color: #ffffff;
     border-radius: 20px;
     text-decoration: none;
 }
 
-.site-nav-item-current > a:hover {
+.site-nav-link-current:hover {
     background-color: #d07058;
     color: #ffffff;
 }
@@ -177,7 +177,6 @@ textarea {
 
 .subnav {
     width: 143px;
-    min-height: 171px;
     background-color: #f8f7f4;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
@@ -231,9 +230,7 @@ textarea {
     width: 261px;
 }
 
-.user-nav-search > a,
-.user-nav-login > a,
-.user-nav-basket > a {
+.user-nav-link {
     color: #ffffff;
     font-size: 14px;
     line-height: 16px;
@@ -243,9 +240,7 @@ textarea {
     border-radius: 20px;
 }
 
-.user-nav-search > a:hover,
-.user-nav-login > a:hover,
-.user-nav-basket > a:hover {
+.user-nav-link:hover {
     background-color: #f8f7f4;
     color: #323232;
 }
@@ -271,7 +266,6 @@ textarea {
 
 .modal-search {
     width: 341px;
-    min-height: 84px;
 }
 
 .login-links a {
@@ -291,7 +285,6 @@ textarea {
 
 .modal-basket {
     width: 540px;
-    min-height: 242px;
     background-color: #f8f7f4;
     border-radius: 5px;
     
@@ -364,7 +357,6 @@ textarea {
 }
 
 .image-slide h3 {
-    margin: 0;
     padding: 0;
     position: relative;
     width: 700px;
@@ -375,7 +367,6 @@ textarea {
     line-height: 60px;
     text-align: center;
     color: #ffffff;
-    font-weight: 700;
 }
 
 .special-offer {
@@ -385,7 +376,6 @@ textarea {
 
 .free-offer {
     width: 560px;
-    min-height: 229px;
 }
 
 .free-offer h3 {
@@ -518,7 +508,6 @@ textarea {
 
 .blog {
     width: 560px;
-    min-height: 220px;
     background-color: #ffffff;
     background-image: url(../img/blog-background.jpg);
     background-repeat: no-repeat;
@@ -551,7 +540,6 @@ textarea {
 
 .subscription {
     width: 549px;
-    min-height: 211px;
     background-color: #f8f7f4;
     border-radius: 15px;
     border: 4px solid lightblue;
@@ -568,7 +556,6 @@ textarea {
 
 .contacts {
     width: 1200px;
-    min-height: 428px;
     padding-top: 1px;
     margin-bottom: 0;
     background-color: #ffffff;
@@ -581,7 +568,6 @@ textarea {
     margin-left: 871px;
     margin-top: 61px;
     width: 302px;
-    height: 305px;
     background-color: #ffffff;
     border-radius: 15px;
 }
@@ -712,7 +698,6 @@ textarea {
 
 .modal-contact-form {
     width: 478px;
-    height: 443px;
     margin: 0 auto;
     background-color: #f8f7f4;
     border-radius: 10px;
@@ -776,7 +761,7 @@ textarea {
 }
 
 .filter-sorting select {
-    width: 194px;
+    width: 100%;
 }
 
 .filter-price-range {
