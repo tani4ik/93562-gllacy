@@ -19,6 +19,11 @@ textarea {
     font-family: "Roboto", Arial, sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .button {
     font-family: "Roboto", Arial, sans-serif;
     text-align: center;
@@ -120,7 +125,7 @@ textarea {
 .main-nav-logo {
     width: 155px;
     height: 65px;
-    margin-right: 21px;
+    margin-right: 9px;
 }
 
 .site-nav,
@@ -132,23 +137,27 @@ textarea {
 }
 
 .site-nav {
-    width: 349px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
 }
 
-.site-nav a,
-.subnav a {
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: left;
-    font-weight: 700;
+.site-nav-item {
+    position: relative;
 }
 
 .site-nav-link {
+    display: block;
+    padding: 9px 13px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
     text-decoration: underline rgba(255, 255, 255, 0.2);
 }
 
-.site-nav-link:hover {
+.site-nav-link:hover,
+.site-nav-item:hover .site-nav-link {
     background-color: #f7f6f3;
     color: #333333;
     border-radius: 20px;
@@ -177,60 +186,80 @@ textarea {
 
 .subnav {
     width: 143px;
+    position: absolute;
+    top: 39px;
     background-color: #f8f7f4;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     display: none;
 }
 
-.subnav a {
+.subnav::before {
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    width: 100%;
+    content: "";
+    height: 3px;
+    background-color: transparent;
+}
+
+.subnav-link {
+    display: block;
+    padding: 9px 20px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
     color: #323232;
 }
 
-.subnav-item:first-child {
-    border-bottom: 1px solid #d3d3d2;
-}
-
-.subnav-item:first-child a {
-    font-weight: 700;
-}
-
-.subnav-item:hover,
-.subnav-item:hover a,
-.subnav-item:focus,
-.subnav-item:focus a {
+.subnav-link:hover,
+.subnav-link:focus {
     background-color: #fbded7;
     color: #323232;
 }
 
-.subnav-item:active,
-.subnav-item:active a {
+.subnav-link:active {
     background-color: #f6b5a5;
 }
 
-.subnav-item-current {
+b .subnav-link {
+    border-bottom: 1px solid #d3d3d2;
+    font-weight: 700;
+}
+
+.subnav-link-current {
+    color: #ffffff; 
     background-color: #d07058;
 }
 
-.subnav-item-current a {
-    color: #ffffff; 
+.subnav-link-first:hover {
+    border-radius: 5px 5px 0 0;
+}
+
+.subnav-link-last:hover {
+    border-radius: 0 0 5px 5px;
 }
 
 /* User navigation */
 
 .user-nav {
-    width: 245px;
+    display: flex;
+    align-items: center;
+    max-width: 245px;
     margin-left: auto;
 }
 
-.inner-page .user-nav {
-    width: 261px;
+.user-nav-search,
+.user-nav-login,
+.user-nav-basket {
+    position: relative;
 }
 
 .user-nav-link {
+    display: block;
+    padding: 9px 13px;
+    margin-left: 9px;
     color: #ffffff;
     font-size: 14px;
     line-height: 16px;
@@ -265,7 +294,13 @@ textarea {
 }
 
 .modal-search {
+    position: absolute;
     width: 341px;
+}
+
+.modal-login {
+    position: absolute;
+    top: 25px;
 }
 
 .login-links a {
@@ -284,6 +319,7 @@ textarea {
 }
 
 .modal-basket {
+    position: absolute;
     width: 540px;
     background-color: #f8f7f4;
     border-radius: 5px;
@@ -309,20 +345,7 @@ textarea {
     font-weight: 700;
 }
 
-.login-links a {
-    font-size: 13px;
-    line-height: 24px;
-    text-align: left;
-    font-weight: 400;
-    color: #323232;
-    text-decoration: underline rgba(50, 50, 50, 0.3);
-}
 
-.login-links a:hover,
-.login-links a:active {
-    color: #e84d37;
-    text-decoration: underline rgba(232, 77, 55, 0.3);
-}
 
 .main-header-contacts {
     margin: 0;
@@ -350,18 +373,10 @@ textarea {
     font-weight: 700;
 }
 
-.gallery-slider {
-    position: relative;
-    bottom: 235px;
-    z-index: -1;
-}
-
 .image-slide h3 {
     padding: 0;
-    position: relative;
     width: 700px;
     margin: 0 auto;
-    top: 510px;
     
     font-size: 60px;
     line-height: 60px;
