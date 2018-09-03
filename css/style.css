@@ -25,6 +25,8 @@ img {
 }
 
 .button {
+    margin: 0;
+    padding: 0;
     font-family: "Roboto", Arial, sans-serif;
     text-align: center;
     color: #ffffff;
@@ -88,11 +90,6 @@ img {
     border: none;
 }
 
-.search-form .input-field,
-.login-form .input-field {
-    font-size: 14px;
-}
-
 .input-field:hover {
     box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.5);
     border: none;
@@ -114,7 +111,7 @@ img {
 .main-header {
     display: flex;
     flex-direction: column;
-    margin-top: 9px;
+    margin-top: 6px;
     margin-bottom: 0;
 }
 
@@ -123,8 +120,8 @@ img {
 }
 
 .main-nav-logo {
-    width: 155px;
-    height: 65px;
+    width: 154px;
+    height: 64px;
     margin-right: 9px;
 }
 
@@ -192,6 +189,7 @@ img {
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     display: none;
+    z-index: 2;
 }
 
 .subnav::before {
@@ -246,33 +244,68 @@ b .subnav-link {
 .user-nav {
     display: flex;
     align-items: center;
-    max-width: 245px;
     margin-left: auto;
 }
 
-.user-nav-search,
-.user-nav-login,
-.user-nav-basket {
+.user-nav-item {
     position: relative;
+    margin-left: 9px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.user-nav-item:hover {
+    background-color: #f8f7f4;
 }
 
 .user-nav-link {
     display: block;
-    padding: 9px 13px;
-    margin-left: 9px;
+    position: relative;
+    padding: 8px 17px;
     color: #ffffff;
     font-size: 14px;
     line-height: 16px;
     text-align: right;
     font-weight: 500;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
 }
 
-.user-nav-link:hover {
-    background-color: #f8f7f4;
+.user-nav-item:hover .user-nav-link {
     color: #323232;
 }
+
+.user-nav-search {
+    margin-left: 0; 
+}
+
+.user-nav-search .user-nav-link {
+    font-size: 0;
+}
+
+.user-nav-search svg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    fill: #ffffff;
+}
+
+.user-nav-login .user-nav-link,
+.user-nav-basket .user-nav-link {
+    padding-left: 45px;
+}
+
+.user-nav-login svg,
+.user-nav-basket svg {
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    fill: #ffffff;
+}
+
+.user-nav-item:hover svg {
+    fill: #000;
+}
+
+
 
 .modal-login,
 .modal-search,
@@ -287,20 +320,57 @@ b .subnav-link {
 }
 
 .modal-search,
-.modal-login {
+.modal-login,
+.modal-basket {
+    position: absolute;
+    top: 37px;
+    right: 0;
     background-color: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.modal-search {
+.modal-search::before,
+.modal-login::before,
+.modal-basket::before {
     position: absolute;
-    width: 341px;
+    display: block;
+    bottom: 100%;
+    width: 100%;
+    content: "";
+    height: 4px;
+    background-color: transparent;
+}
+
+.modal-search {
+    width: 311px;
+    padding: 20px 15px;
 }
 
 .modal-login {
-    position: absolute;
-    top: 25px;
+    width: 243px;
+    padding: 20px 17px;
+}
+
+.search-form .input-field,
+.login-form .input-field {
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 100%;
+    padding: 9px;
+}
+
+.login-form .input-field {
+    margin-bottom: 20px;
+}
+
+.login-form p {
+    margin: 0;
+}
+
+.login-form-button {
+    float: left;
+    padding: 13px 25px;
 }
 
 .login-links a {
@@ -310,6 +380,7 @@ b .subnav-link {
     font-weight: 400;
     color: #323232;
     text-decoration: underline rgba(50, 50, 50, 0.3);
+    padding-left: 20px;
 }
 
 .login-links a:hover,
@@ -319,36 +390,91 @@ b .subnav-link {
 }
 
 .modal-basket {
-    position: absolute;
-    width: 540px;
-    background-color: #f8f7f4;
-    border-radius: 5px;
+    width: 500px;
+    padding: 20px;
     
     color: #323232;
     font-size: 13px;
     line-height: 16px;
-    text-align: left;
     font-weight: 400;
+}
+
+.basket-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.basket-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button-remove {
+    padding: 0;
+    margin: 0;
+    margin-right: 9px;
+    width: 11px;
+    height: 11px;
+    font-size: 0;
+    background-image: url(../img/cross-small.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f8f7f4;
+    border: none;
+    cursor: pointer;
+}
+
+.basket-item img {
+    margin-left: 9px;
+}
+
+.basket-item .item-name {
+    width: 215px;
+    margin-left: 14px;
+}
+
+.basket-item .item-quantity,
+.basket-item .item-summary {
+    margin: 0 auto;
 }
 
 .basket-item .item-price {
     color: #999999;
 }
 
-.basket-table {
-    border-bottom: 1px solid #cacac7;
-}
-
 .basket-summary {
+    margin: 35px 0 15px 0;
+    padding: 0;
+    position: relative;
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
+    text-align: right;
 }
 
+.basket-summary::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    right: 0;
+    width: 510px;
+    border-bottom: 1px solid #cacac7;
+}
 
+.submit-order {
+    float: right;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
 
 .main-header-contacts {
     margin: 0;
+    margin-top: 2px;
     padding: 0;
     font-size: 14px;
     line-height: 16px;
@@ -358,6 +484,8 @@ b .subnav-link {
 }
 
 .main-header-contacts a {
+    display: block;
+    margin-top: 5px;
     font-size: 22px;
     line-height: 24px;
     color: #ffffff;
