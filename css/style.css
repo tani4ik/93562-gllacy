@@ -776,6 +776,8 @@ b .subnav-link {
 /* Gllacy advantages */
 
 .advantages {
+    padding: 20px 32px 25px 20px;
+    width: 1094px;
     background-color: #ffd393;
     background-image: url(../img/waffel.jpg);
     border-radius: 10px;
@@ -784,20 +786,64 @@ b .subnav-link {
 }
 
 .advantages h2 {
+    margin: 0;
+    margin-top: 3px;
+    padding: 0;
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
 }
 
 .advantages-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
 }
 
-.advatages-list li {
+.advantages-list li {
+    position: relative;
+    width: 470px;
+    padding-top: 21px;
+    padding-left: 56px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
 }
+
+.advantage-ice-cream::before,
+.advantage-cow::before,
+.advantage-eco::before,
+.advantage-thermometer::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 49px;
+    height: 49px;
+}
+
+.advantage-ice-cream::before {
+    background-image: url("../img/ice-cream.svg");
+}
+
+.advantage-cow::before {
+    background-image: url("../img/cow.svg");
+}
+
+.advantage-eco::before {
+    background-image: url("../img/eco.svg");
+}
+
+.advantage-thermometer::before {
+    background-image: url("../img/thermometer.svg");
+}
+
+/* Gllacy blog */
 
 .blog-wrapper {
     display: flex;
