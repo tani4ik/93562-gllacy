@@ -991,51 +991,38 @@ b .subnav-link {
 
 /*Footer*/
 
-.footer-wrapper {
-    margin-bottom: 0;
-}
-
 .main-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.footer-social {
-    width: 185px;
-    margin: 0;
-    margin-right: 236px;
-}
-
-.footer-links {
-    width: 304px;
-    margin: 0;
-}
-
-.footer-copyright {
-    width: 191px;
-    margin: 0;
-    margin-left: auto;
-}
-
-.footer-links ul,
-.footer-social ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    margin-bottom: 0;
+    padding: 25px;
 }
 
 /* Social buttons */
 
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
 .social-button {
-    background-repeat: no-repeat;
+    padding: 0;
     width: 32px;
     height: 32px;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.5);
+    background-repeat: no-repeat;
     opacity: 0.8;
+    font-size: 0;
+}
+
+.social-button:not(:first-child) {
+    margin-left: 11px;
 }
 
 .social-button:hover {
@@ -1057,6 +1044,26 @@ b .subnav-link {
 
 /* Footer links */
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 350px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -14px;
+}
+
+.footer-link {
+    width: 165px;
+    margin-bottom: 3px;
+}
+
+.footer-link:nth-child(odd) a{
+    padding-left: 23px;
+}
+
 .footer-links a {
     font-size: 13px;
     line-height: 18px;
@@ -1068,15 +1075,36 @@ b .subnav-link {
 
 .footer-links a:hover,
 .footer-links a:active {
-    color: #e84d37;
+    color: #ffbc9e;
     text-decoration: underline rgba(232, 77, 55, 0.2);
+}
+
+.footer-link-suppliers {
+    position: relative;
+}
+
+.footer-link-suppliers::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/heart.svg);
+    width: 15px;
+    height: 13px;
+    top: 4px;
+    left: -1px;
 }
 
 .footer-link-suppliers a {
     font-weight: 700;
 }
 
+.footer-copyright {
+    margin: 0;
+    padding: 0;
+}
+
 .footer-copyright p {
+    margin: 0;
+    padding: 0;
     font-size: 12px;
     line-height: 18px;
     text-align: left;
@@ -1091,7 +1119,7 @@ b .subnav-link {
 
 .footer-copyright-link:hover,
 .footer-copyright-link:active {
-    color: #e84d37;
+    color: #ffbc9e;
     text-decoration: underline rgba(232, 77, 55, 0.2);
 }
 
