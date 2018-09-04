@@ -910,7 +910,6 @@ b .subnav-link {
 
 .subscription-form {
     display: flex;
-    justify-content: space-between;
 }
 
 .subscription-form .input-field {
@@ -928,6 +927,9 @@ b .subnav-link {
 /* Gllacy contacts */
 
 .contacts {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
     width: 1200px;
     padding-top: 1px;
     margin-bottom: 0;
@@ -937,15 +939,28 @@ b .subnav-link {
     background-position: center;
 }
 
+.contacts::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/pin.svg);
+    width: 80px;
+    height: 140px;
+    top: 139px;
+    left: 266px;
+}
+
 .contacts-box {
-    margin-left: 871px;
-    margin-top: 61px;
-    width: 302px;
+    width: 248px;
+    margin: 62px 27px;
+    padding: 27px;
+    padding-bottom: 32px;
     background-color: #ffffff;
     border-radius: 15px;
 }
 
 .contacts-box p {
+    margin: 0;
+    padding: 0;
     font-size: 14px;
     line-height: 20px;
     text-align: left;
@@ -955,9 +970,23 @@ b .subnav-link {
 
 .contacts .contacts-address,
 .contacts .contacts-phone {
+    margin-top: 3px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+}
+
+.contacts .contacts-tel {
+    margin-top: 17px;
+}
+
+.contacts .contacts-time {
+    margin-top: 3px;
+}
+
+.button-contacts {
+    margin-top: 25px;
+    padding: 10px 32px;
 }
 
 /*Footer*/
