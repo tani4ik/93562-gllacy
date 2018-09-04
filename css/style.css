@@ -31,8 +31,9 @@ img {
     font-family: "Roboto", Arial, sans-serif;
     text-align: center;
     color: #ffffff;
+    font-weight: 700;
     vertical-align: middle;
-    
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);    
     background-image: linear-gradient(to top, #e74a35, #f26843);
     box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.6);
     border: none;
@@ -527,9 +528,11 @@ b .subnav-link {
     font-weight: 700;
 }
 
+/* Gallery slider */
+
 .slider {
     position: relative;  
-    padding-top: 321px;
+    padding-top: 275px;
     text-align: center;
     color: #ffffff;
 }
@@ -546,7 +549,7 @@ b .subnav-link {
 
 .slider-item h3 {
     margin: 0 auto;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
     padding: 0;
     width: 700px;
     
@@ -558,19 +561,17 @@ b .subnav-link {
 
 .slide-button {
     padding: 12px 44px;
-    font-weight: 700;
     font-size: 31px;
     line-height: 41px;
     vertical-align: top;
-    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     border-radius: 50px;    
 }
 
 .slider-controls {
     position: absolute;
-    bottom: 63px;
+    bottom: 23px;
     left: 0;
-    z-index: 20;
+    z-index: 2;
     font-size: 0;
 }
 
@@ -615,16 +616,22 @@ b .subnav-link {
     background-color: #ffffff;
 }
 
+/* Special offer */
+
 .special-offer {
     display: flex;
     justify-content: space-between;
 }
 
 .free-offer {
-    width: 560px;
+    width: 524px;
+    padding: 16px 18px 24px;
 }
 
 .free-offer h3 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 18px;
     font-size: 35px;
     line-height: 41px;
     text-align: left;
@@ -633,11 +640,19 @@ b .subnav-link {
 }
 
 .free-offer p {
-    font-size: 18px;
+    margin-bottom: 43px;
+    font-size: 17px;
     line-height: 21px;
     text-align: left;
     color: #ffffff;
     font-weight: 700;
+}
+
+.offer-button {
+    float: right;
+    padding: 11px 20px;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .free-offer-left {
@@ -667,23 +682,52 @@ b .subnav-link {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    list-style: none;
 }
 
 .best-selling-item,
 .catalog-item {
     width: 267px;
+    position: relative;
 }
 
-.best-selling-list,
-.catalog-list {
-    list-style: none;
+.catalog-item {
+    margin-bottom: 40px;
+}
+
+.best-selling-item::before {
+    content: "";
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    background-image: url("../img/hit.svg");
+    z-index: 3;
 }
 
 .best-selling-item:hover,
 .catalog-item:hover {
+    z-index: 4;
+}
+
+.best-selling-item:hover::after,
+.catalog-item:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    left: -13px;
+    width: 293px;
+    height: 405px;
     background-color: rgba(248, 247, 244, 0.2);
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    z-index: -1;
+}
+
+.item-title {
+    margin: 0;
+    margin-top: 7px;
+    padding: 0;
+    text-align: center;
 }
 
 .item-title a {
@@ -708,6 +752,10 @@ b .subnav-link {
 
 .button-quick-preview {
     display: none;
+    position: absolute;
+    left: 40px;
+    bottom: -55px;
+    padding: 10px 15px;
 }
 
 .best-selling-item:hover .button-quick-preview,
@@ -716,12 +764,16 @@ b .subnav-link {
 }
     
 .price {
+    position: absolute;
+    top: 209px;
     font-size: 45px;
     line-height: 45px;
     text-align: left;
     font-weight: 700;
     color: #ffffff;
 }
+
+/* Gllacy advantages */
 
 .advantages {
     background-color: #ffd393;
