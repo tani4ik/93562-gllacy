@@ -1400,10 +1400,10 @@ b .subnav-link {
     opacity: 1;
 }
 
-#radio-1:checked ~ .filter-fat-content label[for="radio-1"]::after,
-#radio-2:checked ~ .filter-fat-content label[for="radio-2"]::after,
-#radio-3:checked ~ .filter-fat-content label[for="radio-3"]::after,
-#radio-4:checked ~ .filter-fat-content label[for="radio-4"]::after {
+.filter-fat-content #radio-1:checked ~ label[for="radio-1"]::after,
+.filter-fat-content #radio-2:checked ~ label[for="radio-2"]::after,
+.filter-fat-content #radio-3:checked ~ label[for="radio-3"]::after,
+.filter-fat-content #radio-4:checked ~ label[for="radio-4"]::after {
     display: inline-block;
 }
 
@@ -1438,10 +1438,11 @@ b .subnav-link {
     opacity: 1;
 }
 
-#checkbox-1:checked ~ .filter-fillers label[for="checkbox-1"]::after,
-#checkbox-2:checked ~ .filter-fillers label[for="checkbox-2"]::after,
-#checkbox-3:checked ~ .filter-fillers label[for="checkbox-3"]::after,
-#checkbox-4:checked ~ .filter-fillers label[for="checkbox-4"]::after {
+.filter-fillers #checkbox-1:checked ~ label[for="checkbox-1"]::after,
+.filter-fillers #checkbox-2:checked ~ label[for="checkbox-2"]::after,
+.filter-fillers #checkbox-3:checked ~ label[for="checkbox-3"]::after,
+.filter-fillers #checkbox-4:checked ~ label[for="checkbox-4"]::after,
+.filter-fillers #checkbox-5:checked ~ label[for="checkbox-5"]::after{
     display: inline-block;
 }
 
