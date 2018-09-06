@@ -254,7 +254,9 @@ b .subnav-link {
     font-weight: 700;
 }
 
-.subnav-link-current {
+.subnav-link-current,
+.subnav-link-current:hover,
+.subnav-link-current:active {
     color: #ffffff; 
     background-color: #d07058;
 }
@@ -335,39 +337,35 @@ b .subnav-link {
 
 /* Modal windows */
 
-.modal-login,
-.modal-search,
-.modal-basket {
+.modal {
     display: none;
-}
-
-.user-nav-search:hover .modal-search,
-.user-nav-login:hover .modal-login,
-.user-nav-basket:hover .modal-basket {
-    display: block;
-}
-
-.modal-search,
-.modal-login,
-.modal-basket {
     position: absolute;
     top: 37px;
     right: 0;
     background-color: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    z-index: 5;
 }
 
-.modal-search::before,
-.modal-login::before,
-.modal-basket::before {
+.modal::before {
     position: absolute;
     display: block;
     bottom: 100%;
     width: 100%;
     content: "";
-    height: 4px;
+    height: 5px;
     background-color: transparent;
+}
+
+.modal:hover {
+    display: block;
+}
+
+.user-nav-search:hover .modal-search,
+.user-nav-login:hover .modal-login,
+.user-nav-basket:hover .modal-basket {
+    display: block;
 }
 
 .modal-search {
@@ -692,7 +690,7 @@ b .subnav-link {
 }
 
 .catalog-item {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
 }
 
 .best-selling-item::before {
@@ -997,7 +995,7 @@ b .subnav-link {
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-bottom: 0;
-    padding: 25px;
+    padding: 28px;
 }
 
 /* Social buttons */
@@ -1006,6 +1004,7 @@ b .subnav-link {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+    
     padding: 0;
     list-style: none;
 }
@@ -1099,6 +1098,7 @@ b .subnav-link {
 
 .footer-copyright {
     margin: 0;
+    margin-top: -8px;
     padding: 0;
 }
 
@@ -1110,6 +1110,10 @@ b .subnav-link {
     text-align: left;
     font-weight: 400;
     color: #fefefe;
+}
+
+.footer-copyright img {
+    margin-left: 2px;
 }
 
 .footer-copyright-link {
@@ -1357,8 +1361,12 @@ b .subnav-link {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 8px 20px;
+    padding: 8px 20px 8px 10px;
     list-style: none;
+}
+
+.filter-fillers ul {
+    padding: 7px 24px 7px 18px;
 }
 
 .filter-fat-content label,
@@ -1415,9 +1423,11 @@ b .subnav-link {
     content: "";
     position: absolute;
     left: 0;
-    width: 23px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
     background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     opacity: 0.8;
     cursor: pointer;
 }
@@ -1426,9 +1436,11 @@ b .subnav-link {
     content: "";
     position: absolute;
     left: 0;
-    width: 27px;
-    height: 23px;
+    width: 23px;
+    height: 20px;
     background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     opacity: 1;
     z-index: 10;
     display: none;
@@ -1486,13 +1498,40 @@ b .subnav-link {
 }
 
 .pagination-item {
-    margin-left: 1px;
-    padding: 2px 9px;
-    border-radius: 50%;
+    margin: 2px 11px;
+    position: relative;
 }
 
-.pagination-item-current {
+.pagination-item:not(.pagination-item-current):hover::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -8px;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.pagination-item-current::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -8px;
+    width: 25px;
+    height: 25px;
     background-color: #ffffff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.pagination-previous {
+    margin-left: 0;
+}
+
+.pagination-next {
+    margin-right: 0;
 }
 
 .pagination-item a {
@@ -1505,10 +1544,6 @@ b .subnav-link {
 .pagination-item-current a,
 .pagination-item a:active {
     color: #323232;
-}
-
-.pagination-item:not(:first-child):not(:last-child):not(.pagination-item-current):hover {
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-previous svg,
