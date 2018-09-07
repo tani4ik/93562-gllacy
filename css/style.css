@@ -675,7 +675,7 @@ b .subnav-link {
 /* Ice-cream catalog */
 
 .catalog-wrapper {
-    margin-bottom: 80px;
+    margin-bottom: 43px;
 }
 
 .best-selling-list,
@@ -1530,15 +1530,20 @@ b .subnav-link {
 }
 
 .pagination-item {
-    margin: 2px 11px;
+    margin: 0;
+    padding: 0;
+    margin-left: 4px;
     position: relative;
+}
+
+.pagination-item a {
+    padding: 4px 8px;
 }
 
 .pagination-item:not(.pagination-item-current):not(.pagination-item-disabled):hover::before {
     position: absolute;
     content: "";
-    top: -1px;
-    left: -8px;
+    top: -2px;
     width: 25px;
     height: 25px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -1549,8 +1554,7 @@ b .subnav-link {
 .pagination-item-current::before {
     position: absolute;
     content: "";
-    top: -1px;
-    left: -8px;
+    top: -2px;
     width: 25px;
     height: 25px;
     background-color: #ffffff;
@@ -1562,8 +1566,13 @@ b .subnav-link {
     margin-left: 0;
 }
 
-.pagination-next {
-    margin-right: 0;
+.pagination-previous a {
+    padding-left: 0;
+}
+
+.pagination-next a {
+    padding-right: 0;
+    padding-left: 11px;
 }
 
 .pagination-item a {
