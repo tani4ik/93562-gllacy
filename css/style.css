@@ -169,6 +169,7 @@ img {
 
 .site-nav-item {
     position: relative;
+    margin-right: 3px;
 }
 
 .site-nav-link {
@@ -438,7 +439,7 @@ b .subnav-link {
     margin-bottom: 20px;
 }
 
-.button-remove {
+.basket-button-remove {
     padding: 0;
     margin: 0;
     margin-right: 9px;
@@ -457,17 +458,17 @@ b .subnav-link {
     margin-left: 9px;
 }
 
-.basket-item .item-name {
+.basket-item-name {
     width: 215px;
     margin-left: 14px;
 }
 
-.basket-item .item-quantity,
-.basket-item .item-summary {
+.basket-item-quantity,
+.basket-item-summary {
     margin: 0 auto;
 }
 
-.basket-item .item-price {
+.basket-item-price {
     color: #999999;
 }
 
@@ -774,6 +775,10 @@ b .subnav-link {
     text-align: left;
     font-weight: 700;
     color: #ffffff;
+}
+
+.kilo {
+    font-size: 28px;
 }
 
 /* Gllacy advantages */
