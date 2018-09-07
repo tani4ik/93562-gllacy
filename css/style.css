@@ -586,7 +586,7 @@ b .subnav-link {
 }
 
 .slider-controls label:hover {
-    border-color: #ffffff;
+    background-color: #b3c2b8;
 }
 
 #product-1:checked ~ .site-wrapper {
