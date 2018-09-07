@@ -1556,6 +1556,12 @@ b .subnav-link {
     z-index: -1;
 }
 
+.pagination-item:hover a:active {
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
 .pagination-item-current::before {
     position: absolute;
     content: "";
