@@ -7,6 +7,7 @@ body {
     font-weight: 400;
     color: #323232;
     background-color: #849d8f;
+    font-kerning: none;
 }
 
 a {
@@ -105,9 +106,27 @@ img {
 /* Site navigation */
 
 .site-wrapper {
-    min-width: 940px;
+    width: 100%;
+    min-width: 900px;
     padding-top: 6px;
+    display: flex;
+    flex-direction: column;
 }
+
+.main-header,
+.container-full-width,
+.main-footer,
+.inner-page .container {
+    width: 100%;
+    margin: 0 auto;
+    min-width: 900px;
+    max-width: 1200px;
+}
+
+.center {
+    padding: 0 2.2%;
+}
+
 
 .main-page .site-wrapper {
     background-image: url("../img/slider-img-1.png");
@@ -130,12 +149,6 @@ img {
     background-image: url("../img/slider-img-3.png");
 }
 
-.wrapper {
-    width: 1146px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-
 .main-header {
     display: flex;
     flex-direction: column;
@@ -149,7 +162,7 @@ img {
 .main-nav-logo {
     width: 154px;
     height: 64px;
-    margin-right: 9px;
+    margin-right: 10px;
     margin-top: 2px;
 }
 
@@ -169,7 +182,7 @@ img {
 
 .site-nav-item {
     position: relative;
-    margin-right: 3px;
+    margin-right: 2px;
 }
 
 .site-nav-link {
@@ -315,7 +328,7 @@ b .subnav-link {
 .user-nav-search svg {
     position: absolute;
     top: 8px;
-    left: 8px;
+    left: 10px;
     fill: #ffffff;
 }
 
@@ -328,7 +341,7 @@ b .subnav-link {
 .user-nav-basket svg {
     position: absolute;
     top: 6px;
-    left: 16px;
+    left: 18px;
     fill: #ffffff;
 }
 
@@ -626,11 +639,20 @@ b .subnav-link {
 .special-offer {
     display: flex;
     justify-content: space-between;
+    margin: 40px 0;
+    min-height: 229px;
 }
 
 .free-offer {
-    width: 524px;
-    padding: 16px 18px 24px;
+    min-width: 420px;
+    max-width: 560px;
+    padding: 16px 20px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.free-offer:first-of-type {
+    margin-right: 27px;
 }
 
 .free-offer h3 {
@@ -647,7 +669,6 @@ b .subnav-link {
 .free-offer p {
     margin: 0;
     padding: 0;
-    margin-bottom: 46px;
     font-size: 18px;
     line-height: 21px;
     text-align: left;
@@ -656,7 +677,8 @@ b .subnav-link {
 }
 
 .offer-button {
-    float: right;
+    align-self: flex-end;
+    margin-top: auto;
     padding: 11px 23px;
     font-size: 18px;
     line-height: 24px;
@@ -695,7 +717,7 @@ b .subnav-link {
 
 .best-selling-item,
 .catalog-item {
-    width: 267px;
+    width: 23.5%;
     position: relative;
 }
 
@@ -773,7 +795,7 @@ b .subnav-link {
     
 .price {
     position: absolute;
-    top: 209px;
+    bottom: 20%;
     font-size: 45px;
     line-height: 45px;
     text-align: left;
@@ -788,8 +810,8 @@ b .subnav-link {
 /* Gllacy advantages */
 
 .advantages {
-    padding: 20px 32px 25px 20px;
-    width: 1094px;
+    margin: 40px 0;
+    padding: 20px 20px 25px 20px;
     background-color: #ffd393;
     background-image: url(../img/waffel.jpg);
     border-radius: 10px;
@@ -819,12 +841,17 @@ b .subnav-link {
 
 .advantages-list li {
     position: relative;
-    width: 475px;
+    width: 43.7%;
     padding-top: 21px;
     padding-left: 56px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
+}
+
+.advantages-list li:nth-child(1),
+.advantages-list li:nth-child(2) {
+    margin-bottom: 1px;
 }
 
 .advantage-ice-cream::before,
@@ -858,13 +885,27 @@ b .subnav-link {
 /* Gllacy blog */
 
 .blog-wrapper {
+    margin: 40px 0;
     display: flex;
     justify-content: space-between;
+    min-height: 220px;
+}
+
+.blog,
+.subscription {
+    max-width: 420px;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+}
+
+.subscription {
+    margin-left: 2.5%;
 }
 
 .blog {
-    width: 520px;
-    padding: 23px 20px 20px;
+    padding: 22px 20px 20px;
     background-color: #ffffff;
     background-image: url(../img/blog-background.jpg);
     background-repeat: no-repeat;
@@ -873,7 +914,7 @@ b .subnav-link {
 
 .blog h2 {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     padding: 0;
     font-size: 16px;
     line-height: 22px;
@@ -902,16 +943,19 @@ b .subnav-link {
 
 
 .subscription {
-    width: 510px;
-    padding: 34px 25px;
+    padding: 29px 10px 35px 20px;
     background-color: #f8f7f4;
-    background-image: url(../img/subscription-background.png);
+    border: 5px solid transparent;
+    border-image-source: url(../img/bg-post.svg);
+    border-image-slice: 6;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
 
 .subscription p {
     margin: 0;
-    margin-bottom: 35px;
     padding: 0;
     font-size: 16px;
     line-height: 22px;
@@ -921,6 +965,7 @@ b .subnav-link {
 }
 
 .subscription-form {
+    margin-top: auto;
     display: flex;
 }
 
@@ -934,7 +979,11 @@ b .subnav-link {
 
 .subscription-button {
     font-size: 18px;
-    padding: 10px 20px;
+    line-height: 24px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    margin-bottom: 1px;
+    margin-right: 10px;
 }
 
 /* Gllacy contacts */
@@ -943,13 +992,14 @@ b .subnav-link {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    width: 1200px;
-    padding-top: 1px;
+    min-width: 900px;
+    margin: 0 auto;
     margin-bottom: 0;
     background-color: #ffffff;
     background-image: url(../img/map.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .contacts::before {
@@ -959,13 +1009,13 @@ b .subnav-link {
     width: 80px;
     height: 140px;
     top: 139px;
-    left: 266px;
+    left: 296px;
 }
 
 .contacts-box {
-    width: 248px;
-    margin: 62px 27px;
-    padding: 27px 28px 30px 26px;
+    width: 252px;
+    margin: 62px 59px;
+    padding: 28px 25px 31px;
     background-color: #ffffff;
     border-radius: 15px;
 }
@@ -1002,7 +1052,7 @@ b .subnav-link {
 
 .button-contacts {
     margin-top: 25px;
-    padding: 10px 25px;
+    padding: 10px 27px;
     font-size: 18px;
     line-height: 24px;
     border-radius: 25px;
@@ -1010,7 +1060,7 @@ b .subnav-link {
 
 /*Footer*/
 
-.main-footer {
+.main-footer .center {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1076,7 +1126,7 @@ b .subnav-link {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: -3px;
+    margin-top: -4px;
     margin-left: -23px;
 }
 
@@ -1123,8 +1173,12 @@ b .subnav-link {
 
 .footer-copyright {
     margin: 0;
-    margin-top: -8px;
+    margin-top: -10px;
     padding: 0;
+}
+
+.footer-copyright img {
+    margin-left: 2px;
 }
 
 .footer-copyright p {
@@ -1262,7 +1316,7 @@ b .subnav-link {
 }
 
 .title-wrapper {
-    margin-top: -25px;
+    margin-top: -10px;
     margin-bottom: 39px;
 }
 
@@ -1274,6 +1328,7 @@ b .subnav-link {
     width: 860px;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 40px;
 }
 
 .filter fieldset {
@@ -1288,13 +1343,17 @@ b .subnav-link {
 }
 
 .filter legend {
-    margin-left: 15px;
+    margin-left: 16px;
     margin-bottom: 6px;
     color: #ffffff;
     font-size: 14px;
     line-height: 16px;
     text-align: left;
     font-weight: 500;
+}
+
+.filter-price-range legend {
+    margin-left: 14px;
 }
 
 .filter-sorting select,
@@ -1367,7 +1426,7 @@ b .subnav-link {
     position: absolute;
     top: 15px;
     left: 55px;
-    width: 75px;
+    width: 77px;
     height: 4px;
     background-color: #ffffff;
 }
@@ -1389,7 +1448,7 @@ b .subnav-link {
 }
 
 .range-toggle-max {
-    left: 130px;
+    left: 132px;
 }
 
 .range-toggle:hover {
@@ -1399,6 +1458,7 @@ b .subnav-link {
 .filter-fat-content {
     width: 415px;
     margin-left: auto;
+    padding-top: 1px;
 }
 
 .filter-fat-content ul,
@@ -1406,12 +1466,12 @@ b .subnav-link {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 8px 20px 8px 10px;
+    padding: 9px 20px 9px 10px;
     list-style: none;
 }
 
 .filter-fillers ul {
-    padding: 6px 20px 7px 16px;
+    padding: 6px 19px 7px 17px;
 }
 
 .filter-fat-content label,
