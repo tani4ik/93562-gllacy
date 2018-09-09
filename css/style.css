@@ -1311,6 +1311,7 @@ b .subnav-link {
 .breadcrumbs li:not(:last-child)::after {
     position: absolute;
     content: "»";
+    top: 0;
     right: -15px;
     font-size: 12px;
 }
