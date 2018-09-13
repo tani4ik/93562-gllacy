@@ -24,7 +24,6 @@ img {
     display: inline-block;
     margin: 0;
     padding: 0;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
     background-image: linear-gradient(to top, #e74a35, #f26843);
     border: none;
     border-radius: 25px;
@@ -38,13 +37,11 @@ img {
 }
 
 .button:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
     background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
     box-shadow: 0px 2px 2px 0 #ac1000;
 }
 
 .button:active {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
     background-image: linear-gradient(to bottom, #d84732, #e1613e);
     box-shadow: inset 0px 2px 2px 0 #942718;
 }

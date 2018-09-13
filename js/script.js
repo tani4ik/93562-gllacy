@@ -2,8 +2,8 @@ var button = document.querySelector(".button-contacts");
 var popup = document.querySelector(".modal-contact-form");
 var overlay = document.querySelector(".modal-overlay");
 var close = document.querySelector(".modal-close");
-var user_name = popup.querySelector("#contact-form-name");
-var user_email = popup.querySelector("#contact-form-email");
+var userName = popup.querySelector("#contact-form-name");
+var userEmail = popup.querySelector("#contact-form-email");
 var message = popup.querySelector("#contact-form-message");
 var form = popup.querySelector("form");
 
@@ -15,7 +15,7 @@ button.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-   if (!user_name.value || !user_email.value || !message.value) {
+   if (!userName.value || !userEmail.value || !message.value) {
       evt.preventDefault();
       popup.classList.remove("modal-error");
       popup.offsetWidth = popup.offsetWidth;
