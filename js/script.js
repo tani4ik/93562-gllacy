@@ -11,7 +11,7 @@ button.addEventListener("click", function (evt) {
    evt.preventDefault();
    popup.classList.add("modal-show");
    overlay.classList.add("modal-overlay-show");
-   user_name.focus();
+   userName.focus();
 });
 
 form.addEventListener("submit", function (evt) {
